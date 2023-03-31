@@ -1,12 +1,14 @@
 import React from "react";
 
-const Footer = () => {
+import { Container } from "./styles";
+
+const Footer: React.FC = () => {
   return (
-    <footer>
+    <Container>
       <p>
         <span>React + TS ToDo</span> @ 2023
       </p>
-    </footer>
+    </Container>
   );
 };
 

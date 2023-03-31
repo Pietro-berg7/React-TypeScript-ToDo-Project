@@ -4,11 +4,16 @@ import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+// CSS
+import { Container } from "./App.styles";
+
 function App() {
   return (
     <div>
       <Header />
-      <h1>Conteudo...</h1>
+      <Container>
+        <h1>Conteudo...</h1>
+      </Container>
       <Footer />
     </div>
   );
