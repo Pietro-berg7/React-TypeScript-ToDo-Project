@@ -9,6 +9,9 @@ import TaskList from "../../components/TaskList";
 // CSS
 import { Container } from "./styles";
 
+// Interface
+import { ITask } from "../../interfaces/Task";
+
 function Home() {
   return (
     <div>
