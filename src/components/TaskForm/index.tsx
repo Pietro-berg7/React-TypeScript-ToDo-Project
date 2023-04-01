@@ -23,7 +23,7 @@ const TaskForm = ({
 }: Props) => {
   const [id, setId] = useState<number>(0);
   const [title, setTitle] = useState<string>("");
-  const [difficulty, setDifficulty] = useState<number>(0);
+  const [difficulty, setDifficulty] = useState<number>(1);
 
   useEffect(() => {
     if (task) {
@@ -74,7 +74,9 @@ const TaskForm = ({
         <input
           type="number"
           name="difficulty"
-          placeholder="Dificuldade da tarefa"
+          min="1"
+          max="5"
+          placeholder="Dificuldade da tarefa (1 a 5)"
           onChange={handleChange}
           value={difficulty}
         />

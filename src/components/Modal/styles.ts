@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  position: absolute;
-  top: 10%;
+  position: fixed;
+  top: 15%;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -27,7 +27,7 @@ export const Container = styled.div`
 export const Fade = styled.div`
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   background-color: #000;
   opacity: 0.3;
 `;
