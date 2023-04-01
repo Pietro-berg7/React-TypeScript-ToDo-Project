@@ -5,6 +5,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import TaskForm from "../../components/TaskForm";
 import TaskList from "../../components/TaskList";
+import Modal from "../../components/Modal";
 
 // CSS
 import { Container } from "./styles";
@@ -25,6 +26,7 @@ function Home() {
 
   return (
     <div>
+      <Modal />
       <Header />
       <Container>
         <div>
