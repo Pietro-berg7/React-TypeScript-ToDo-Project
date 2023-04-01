@@ -1,7 +1,7 @@
 import React from "react";
 
 // CSS
-import { Container } from "./styles";
+import { Actions, Container, Details } from "./styles";
 
 // Interface
 import { ITask } from "../../interfaces/Task";
@@ -15,9 +15,16 @@ const TaskList = ({ taskList }: Props) => {
     <>
       {taskList.length > 0 ? (
         taskList.map((task) => (
-          <div key={task.id}>
-            <p>{task.title}</p>
-          </div>
+          <Container>
+            <Details>
+              <h4>{task.title}</h4>
+              <p>Dificuldade: {task.difficulty}</p>
+            </Details>
+            <Actions>
+              <i className="bi bi-pencil"></i>
+              <i className="bi bi-trash"></i>
+            </Actions>
+          </Container>
         ))
       ) : (
         <p>Não há tarefas cadastradas!</p>
