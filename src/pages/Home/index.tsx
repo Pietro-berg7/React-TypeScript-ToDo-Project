@@ -29,7 +29,7 @@ function Home() {
         </div>
         <div>
           <h2>Suas tarefas:</h2>
-          <TaskList />
+          <TaskList taskList={taskList} />
         </div>
       </Container>
       <Footer />
