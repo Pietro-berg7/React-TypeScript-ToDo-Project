@@ -9,9 +9,14 @@ interface Props {
 }
 
 const Modal = ({ children }: Props) => {
+  const closeModal = (e: React.MouseEvent): void => {
+    const modal = document.querySelector("#modal");
+    modal!.classList.add("hide");
+  };
+
   return (
-    <div>
-      <Fade></Fade>
+    <div id="modal">
+      <Fade onClick={closeModal}></Fade>
       <Container>
         <h2>Texto modal</h2>
         {children}

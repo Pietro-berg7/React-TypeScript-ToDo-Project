@@ -9,20 +9,26 @@ import { ITask } from "../../interfaces/Task";
 interface Props {
   taskList: ITask[];
   handleDelete(id: number): void;
+  handleEdit(): void;
 }
 
-const TaskList = ({ taskList, handleDelete }: Props) => {
+const TaskList = ({ taskList, handleDelete, handleEdit }: Props) => {
   return (
     <>
       {taskList.length > 0 ? (
         taskList.map((task) => (
-          <Container>
+          <Container key={task.id}>
             <Details>
               <h4>{task.title}</h4>
               <p>Dificuldade: {task.difficulty}</p>
             </Details>
             <Actions>
-              <i className="bi bi-pencil"></i>
+              <i
+                className="bi bi-pencil"
+                onClick={() => {
+                  handleEdit();
+                }}
+              ></i>
               <i
                 className="bi bi-trash"
                 onClick={() => {
