@@ -26,7 +26,9 @@ function Home() {
 
   return (
     <div>
-      <Modal />
+      <Modal
+        children={<TaskForm btnText="Editar Tarefa" taskList={taskList} />}
+      />
       <Header />
       <Container>
         <div>

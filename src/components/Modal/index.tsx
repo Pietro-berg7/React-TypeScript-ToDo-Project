@@ -1,19 +1,22 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 // CSS
-import { Container } from "./styles";
+import { Container, Fade } from "./styles";
 
 // Interface
-interface Props {}
+interface Props {
+  children: React.ReactNode;
+}
 
-const Modal = () => {
+const Modal = ({ children }: Props) => {
   return (
-    <Container>
-      <div></div>
-      <div>
+    <div>
+      <Fade></Fade>
+      <Container>
         <h2>Texto modal</h2>
-      </div>
-    </Container>
+        {children}
+      </Container>
+    </div>
   );
 };
 
